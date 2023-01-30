@@ -25,10 +25,23 @@ ARCH_FILTER += linux-x86_64
 #
 #     REQUIRED += asyn
 
+REQUIRED += modbus
+  ifneq ($(strip $(MODBUS_DEP_VERSION)),)
+  modbus_VERSION=$(MODBUS_DEP_VERSION)
+endif
+REQUIRED += iocshutils
+ifneq ($(strip $(IOCSHUTILS_DEP_VERSION)),)
+  iocshutils_VERSION=$(IOCSHUTILS_DEP_VERSION)
+endif
+REQUIRED += autosave
+ifneq ($(strip $(AUTOSAVE_DEP_VERSION)),)
+  autosave_VERSION=$(AUTOSAVE_DEP_VERSION)
+endif
+
 # Since this file (awakessa.Makefile) is copied into
 # the module directory at build-time, these paths have to be relative
 # to that path
-APP := awakessaApp
+APP := .
 APPDB := $(APP)/Db
 APPSRC := $(APP)/src
 
@@ -40,15 +53,15 @@ APPSRC := $(APP)/src
 #     USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
 TEMPLATES += $(wildcard $(APPDB)/*.db)
-TEMPLATES += $(wildcard $(APPDB)/*.proto)
-TEMPLATES += $(wildcard $(APPDB)/*.template)
+#TEMPLATES += $(wildcard $(APPDB)/*.proto)
+#TEMPLATES += $(wildcard $(APPDB)/*.template)
 
 SCRIPTS += $(wildcard ../iocsh/*.iocsh)
 
 # Same as with any source or header files, you can also use $SUBS and $TMPS to define
 # database files to be inflated (using MSI), e.g.
 #
-#     SUBS = $(wildcard $(APPDB)/*.substitutions)
+     SUBS = $(wildcard $(APPDB)/*.substitutions)
 #     TMPS = $(wildcard $(APPDB)/*.template)
 
 USR_DBFLAGS += -I . -I ..

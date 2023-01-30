@@ -1,0 +1,31 @@
+#- ###                miscfreia   iocsh             ###
+#- ####################################################
+#- >> Mandatory
+#- IOCNAME -	  - IOC name
+#- TOP	   	  - top directory for autosave
+#- IP_ADDR	  - ip address of DMT modbus device (dew point measurement unit)
+#-
+#- >> Optional
+#- SSA_PREFIX	  - prefix for the PVs default HPRF-SSA:
+#-
+
+
+epicsEnvSet("IOCDIR", "awakessa")
+
+epicsEnvSet("PREFIX" "$(SSAPREFIX=HPRF-SSA:)")
+
+################################################
+# Documentation: http://cars9.uchicago.edu/software/epics/modbusDoc.html
+
+drvAsynIPPortConfigure("$(ASYN_PORT)","$(IP_ADDR):502",0,0,1)
+
+modbusInterposeConfig("$(ASYN_PORT)",0,1000,0)
+
+drvModbusAsynConfigure("DATA_IN", "$(ASYN_PORT)", 0, 3, 0, 60, FLOAT32_BE, 2000, "ssa")
+drvModbusAsynConfigure("DATA_OUT", "$(ASYN_PORT)", 0, 6, 0, 60, FLOAT32_BE, 1, "ssa")
+
+dbLoadRecords "awake-ssa.db", "P=$(PREFIX), PORT_IN=DATA_IN, PORT_OUT=DATA_OUT, SCAN='I/O Intr'"
+
+dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT)',ADDR='0',IMAX='1024',OMAX='256'")
+asynSetTraceIOMask "$(ASYN_PORT)",0,4   # Enable traceIOHex
+#asynSetTraceMask "$(ASYN_PORT)",0,9     # Enable traceError and traceIODriver

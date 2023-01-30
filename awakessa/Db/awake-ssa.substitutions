@@ -1,0 +1,13 @@
+file "ssa-lookup.template" { pattern
+{S   			   INDX	 OFFS}
+{LKupTbl-Pwr		   0	 0}
+{LKupTbl-Pwr		   1	 2}
+{LKupTbl-Pwr		   2	 4}
+{LKupTbl-Pwr		   3	 6}
+{LKupTbl-Pwr		   4	 8}
+{LKupTbl-Pwr		   5	 10}
+{LKupTbl-Pwr		   6	 12}
+{LKupTbl-Pwr		   7	 14}
+{LKupTbl-Pwr		   8	 16}
+{LKupTbl-Pwr		   9	 18}
+}

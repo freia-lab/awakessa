@@ -1,0 +1,26 @@
+record(ai, "$(P)$(S)[$(INDX)]:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(PORT_IN) $(OFFS))FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500.0")
+    field(LOPR,"10.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"$(SCAN)")
+}
+
+record(ao, "$(P)$(S)[$(INDX)]:cSetV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(PORT_OUT) $(OFFS))FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500.0")
+    field(LOPR,"10.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}
+
