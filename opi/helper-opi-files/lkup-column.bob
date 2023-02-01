@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>lkup-column</name>
+  <width>140</width>
+  <height>240</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(TITLE)</text>
+    <x>20</x>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <I>0</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>30</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_1</name>
+    <macros>
+      <I>1</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>50</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_2</name>
+    <macros>
+      <I>2</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>70</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_3</name>
+    <macros>
+      <I>3</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>90</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_4</name>
+    <macros>
+      <I>4</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>110</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_4</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_5</name>
+    <macros>
+      <I>5</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>130</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_5</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_6</name>
+    <macros>
+      <I>6</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>150</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_6</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_7</name>
+    <macros>
+      <I>7</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>170</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_7</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_8</name>
+    <macros>
+      <I>8</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>190</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_8</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_9</name>
+    <macros>
+      <I>9</I>
+      <S>LKupTbl-$(D)[$(I)]</S>
+    </macros>
+    <y>210</y>
+    <width>130</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P)$(S):sRdV</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_9</name>
+      <pv_name>$(P)$(S):cSetV</pv_name>
+      <width>60</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+</display>

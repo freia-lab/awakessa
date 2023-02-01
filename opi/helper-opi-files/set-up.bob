@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>set-up</name>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs</name>
+    <tabs>
+      <tab>
+        <name>Interlocks</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Look-up table</name>
+        <file>lkup-tbl.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>10</x>
+    <y>10</y>
+    <width>660</width>
+    <height>420</height>
+  </widget>
+</display>

@@ -1,13 +1,37 @@
 file "ssa-lookup.template" { pattern
-{S   			   INDX	 OFFS}
-{LKupTbl-Pwr		   0	 0}
-{LKupTbl-Pwr		   1	 2}
-{LKupTbl-Pwr		   2	 4}
-{LKupTbl-Pwr		   3	 6}
-{LKupTbl-Pwr		   4	 8}
-{LKupTbl-Pwr		   5	 10}
-{LKupTbl-Pwr		   6	 12}
-{LKupTbl-Pwr		   7	 14}
-{LKupTbl-Pwr		   8	 16}
-{LKupTbl-Pwr		   9	 18}
+{S   			   EGU  INDX	 OFFS}
+{LKupTbl-Pwr		   W	0	 0}
+{LKupTbl-Pwr		   W	1	 2}
+{LKupTbl-Pwr		   W	2	 4}
+{LKupTbl-Pwr		   W	3	 6}
+{LKupTbl-Pwr		   W	4	 8}
+{LKupTbl-Pwr		   W	5	 10}
+{LKupTbl-Pwr		   W	6	 12}
+{LKupTbl-Pwr		   W	7	 14}
+{LKupTbl-Pwr		   W	8	 16}
+{LKupTbl-Pwr		   W	9	 18}
+{LKupTbl-Ud		   V	0	 20}
+{LKupTbl-Ud		   V	1	 22}
+{LKupTbl-Ud		   V	2	 24}
+{LKupTbl-Ud		   V	3	 26}
+{LKupTbl-Ud		   V	4	 28}
+{LKupTbl-Ud		   V	5	 30}
+{LKupTbl-Ud		   V	6	 32}
+{LKupTbl-Ud		   V	7	 34}
+{LKupTbl-Ud		   V	8	 36}
+{LKupTbl-Ud		   V	9	 38}
+{LKupTbl-Ug		   V	0	 40}
+{LKupTbl-Ug		   V	1	 42}
+{LKupTbl-Ug		   V	2	 44}
+{LKupTbl-Ug		   V	3	 46}
+{LKupTbl-Ug		   V	4	 48}
+{LKupTbl-Ug		   V	5	 50}
+{LKupTbl-Ug		   V	6	 52}
+{LKupTbl-Ug		   V	7	 54}
+{LKupTbl-Ug		   V	8	 56}
+{LKupTbl-Ug		   V	9	 58}
+}
+
+file "ssa-setup.template" { pattern {}
+{}
 }

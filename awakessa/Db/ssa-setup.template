@@ -1,0 +1,43 @@
+record(ai, "$(P)NomPwr:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 1)FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500.0")
+    field(LOPR,"10.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+
+record(ao, "$(P)NomPwr:cSetV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(STUP_OUT) 1)FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500.0")
+    field(LOPR,"10.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}
+
+record(bi, "$(P)Remote:sOn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 0 0x0100)")
+    field(ZNAM, "Local")
+    field(ONAM, "Remote")
+    field(ZSV, "MINOR")
+    field(SCAN,"I/O Intr")
+}
+
+record(bo, "$(P)Remote:cOn") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(STUP_OUT) 0 0x0100)")
+    field(ZNAM, "Remote Off")
+    field(ONAM, "Remote On")
+    field(ZSV, "MINOR")
+    field(PINI, "YES")
+}

@@ -21,10 +21,23 @@ drvAsynIPPortConfigure("$(ASYN_PORT)","$(IP_ADDR):502",0,0,1)
 
 modbusInterposeConfig("$(ASYN_PORT)",0,1000,0)
 
+#drvModbusAsynConfigure(portName, 
+#                       tcpPortName,
+#                       slaveAddress, 
+#                       modbusFunction, 
+#                       modbusStartAddress, 
+#                       modbusLength,
+#                       dataType,
+#                       pollMsec, 
+#                       plcType);
+
 drvModbusAsynConfigure("DATA_IN", "$(ASYN_PORT)", 0, 3, 0, 60, FLOAT32_BE, 2000, "ssa")
 drvModbusAsynConfigure("DATA_OUT", "$(ASYN_PORT)", 0, 6, 0, 60, FLOAT32_BE, 1, "ssa")
 
-dbLoadRecords "awake-ssa.db", "P=$(PREFIX), PORT_IN=DATA_IN, PORT_OUT=DATA_OUT, SCAN='I/O Intr'"
+drvModbusAsynConfigure("SETUP_IN", "$(ASYN_PORT)", 0, 3, 60, 9, UINT16, 2000, "ssa")
+drvModbusAsynConfigure("SETUP_OUT", "$(ASYN_PORT)", 0, 6, 60, 9, UINT16, 1, "ssa")
+
+dbLoadRecords "awake-ssa.db", "P=$(PREFIX), PORT_IN=DATA_IN, PORT_OUT=DATA_OUT, STUP_IN=SETUP_IN, STUP_OUT=SETUP_OUT, SCAN='I/O Intr'"
 
 dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT)',ADDR='0',IMAX='1024',OMAX='256'")
 asynSetTraceIOMask "$(ASYN_PORT)",0,4   # Enable traceIOHex

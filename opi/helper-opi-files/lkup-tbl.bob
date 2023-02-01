@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>lkup-table</name>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <D>Pwr</D>
+      <TITLE>Power</TITLE>
+    </macros>
+    <file>lkup-column.bob</file>
+    <x>60</x>
+    <y>90</y>
+    <width>140</width>
+    <height>240</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <D>Ud</D>
+      <TITLE>U drain</TITLE>
+    </macros>
+    <file>lkup-column.bob</file>
+    <x>200</x>
+    <y>90</y>
+    <width>140</width>
+    <height>240</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <D>Ug</D>
+      <TITLE>U gate</TITLE>
+    </macros>
+    <file>lkup-column.bob</file>
+    <x>340</x>
+    <y>90</y>
+    <width>140</width>
+    <height>240</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Look-up table for U drain and U gate as a function of nominal power (maximum expected power).
+If the table is not filled fully it must contain zeroes to the end of the table.</text>
+    <x>20</x>
+    <y>10</y>
+    <width>490</width>
+    <height>70</height>
+  </widget>
+</display>
