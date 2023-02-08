@@ -62,4 +62,103 @@
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Reset</description>
+      </action>
+    </actions>
+    <pv_name>$(P)cmdRst</pv_name>
+    <x>40</x>
+    <y>350</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text> Set-point      Read-back</text>
+    <x>440</x>
+    <y>30</y>
+    <width>170</width>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <D>Ug</D>
+    </macros>
+    <x>380</x>
+    <y>50</y>
+    <width>220</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>$(D)</text>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)$(D)_SP:sRdV</pv_name>
+      <x>60</x>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(D):sRdV</pv_name>
+      <x>150</x>
+      <width>70</width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_1</name>
+    <macros>
+      <D>Ud</D>
+    </macros>
+    <x>380</x>
+    <y>70</y>
+    <width>220</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>$(D)</text>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(P)$(D)_SP:sRdV</pv_name>
+      <x>60</x>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P)$(D):sRdV</pv_name>
+      <x>150</x>
+      <width>70</width>
+    </widget>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button</name>
+    <pv_name>$(P)dBm:cOn</pv_name>
+    <x>370</x>
+    <y>110</y>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)NomPwrdBm:cSetV</pv_name>
+    <x>180</x>
+    <y>170</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)NomPwrdBm:sRdV</pv_name>
+    <x>290</x>
+    <y>170</y>
+  </widget>
 </display>

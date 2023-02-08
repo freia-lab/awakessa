@@ -5,7 +5,7 @@ record(ai, "$(P)NomPwr:sRdV") {
     field(EGU,"W")
     field(HOPR,"500.0")
     field(LOPR,"10.0")
-    field(PREC,"1")
+    field(PREC,"0")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
     field(SCAN,"I/O Intr")
@@ -18,12 +18,150 @@ record(ao, "$(P)NomPwr:cSetV") {
     field(EGU,"W")
     field(HOPR,"500.0")
     field(LOPR,"10.0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}
+
+record(ai, "$(P)NomPwrdBm:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 3)FLOAT32_BE")
+    field(EGU,"dBm")
+    field(HOPR,"57.0")
+    field(LOPR,"10.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+
+record(ao, "$(P)NomPwrdBm:cSetV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(STUP_OUT) 3)FLOAT32_BE")
+    field(EGU,"dBm")
+    field(HOPR,"57")
+    field(LOPR,"10.0")
     field(PREC,"1")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
     field(PINI, "YES")
 }
 
+record(ai, "$(P)Ud_SP:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 5)FLOAT32_BE")
+    field(EGU,"V")
+    field(HOPR,"35.0")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P)Ug_SP:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 7)FLOAT32_BE")
+    field(EGU,"V")
+    field(HOPR,"3.5")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+###### ADC data
+record(ai, "$(P)Ud:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 10)FLOAT32_BE")
+    field(EGU,"V")
+    field(HOPR,"35")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Ug:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 12)FLOAT32_BE")
+    field(EGU,"V")
+    field(HOPR,"3.5")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Pfwd:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 14)FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500")
+    field(LOPR,"0.0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Prev:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 16)FLOAT32_BE")
+    field(EGU,"W")
+    field(HOPR,"500")
+    field(LOPR,"0.0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Id:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 18)FLOAT32_BE")
+    field(EGU,"A")
+    field(HOPR,"1.5")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Pfwd-dBm:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 30)FLOAT32_BE")
+    field(EGU,"dBm")
+    field(HOPR,"56")
+    field(LOPR,"0.0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Prev-dBm:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 32)FLOAT32_BE")
+    field(EGU,"dBm")
+    field(HOPR,"56")
+    field(LOPR,"0.0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+
+####### Binary data
 record(bi, "$(P)Remote:sOn") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(STUP_IN) 0 0x0100)")
@@ -41,3 +179,29 @@ record(bo, "$(P)Remote:cOn") {
     field(ZSV, "MINOR")
     field(PINI, "YES")
 }
+
+record(bi, "$(P)dBm:sOn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 0 0x0200)")
+    field(ZNAM, "Unit: W")
+    field(ONAM, "Unit: dBm")
+    field(SCAN,"I/O Intr")
+}
+
+record(bo, "$(P)dBm:cOn") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(STUP_OUT) 0 0x0200)")
+    field(ZNAM, "Unit: W")
+    field(ONAM, "Unit: dBm")
+    field(PINI, "YES")
+}
+
+record(bo, "$(P)cmdRst") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(STUP_OUT) 9 0x0800)")
+    field(HIGH, "0.5")
+    field(ZNAM, "Idle")
+    field(ONAM, "Reset")
+    field(PINI, "YES")
+}
+
