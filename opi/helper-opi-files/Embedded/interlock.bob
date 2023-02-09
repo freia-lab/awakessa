@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>interlock</name>
+  <width>90</width>
+  <height>30</height>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Intlk-$(SIG):sOK</pv_name>
+    <x>2</x>
+    <y>2</y>
+    <width>80</width>
+    <height>25</height>
+    <off_label>$(SIG)</off_label>
+    <off_color>
+      <color name="MAJOR" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_label>$(SIG)</on_label>
+    <on_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </on_color>
+    <square>true</square>
+    <rules>
+      <rule name="Visible" prop_id="visible" out_exp="false">
+        <exp bool_exp="pvInt0 != 0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)Intlk-$(SIG):sIgn</pv_name>
+      </rule>
+    </rules>
+  </widget>
+</display>

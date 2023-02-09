@@ -70,7 +70,7 @@ record(ai, "$(P)Ug_SP:sRdV") {
     field(EGU,"V")
     field(HOPR,"3.5")
     field(LOPR,"0.0")
-    field(PREC,"1")
+    field(PREC,"2")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
     field(SCAN,"I/O Intr")
@@ -95,7 +95,7 @@ record(ai, "$(P)Ug:sRdV") {
     field(EGU,"V")
     field(HOPR,"3.5")
     field(LOPR,"0.0")
-    field(PREC,"1")
+    field(PREC,"2")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
     field(SCAN,"I/O Intr")
@@ -205,3 +205,66 @@ record(bo, "$(P)cmdRst") {
     field(PINI, "YES")
 }
 
+# Binary data (read only)
+
+record(bi, "$(P)Intlk-WtrCool:sOK") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x2000)")
+    field(ZNAM, "Fault")
+    field(ZSV, "MAJOR")
+    field(ONAM, "OK")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-WtrCool:sIgn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0020)")
+    field(ZNAM, "Active")
+    field(ONAM, "Ignored")
+    field(SCAN,"I/O Intr")
+}
+
+record(bi, "$(P)Intlk-DutyCyc:sOK") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0100)")
+    field(ZNAM, "Fault")
+    field(ZSV, "MAJOR")
+    field(ONAM, "OK")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-DutyCyc:sIgn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0001)")
+    field(ZNAM, "Active")
+    field(ONAM, "Ignored")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-ExtT1:sOK") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0400)")
+    field(ZNAM, "Fault")
+    field(ZSV, "MAJOR")
+    field(ONAM, "OK")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-ExtT1:sIgn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0004)")
+    field(ZNAM, "Active")
+    field(ONAM, "Ignored")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-ExtT3:sOK") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0800)")
+    field(ZNAM, "Fault")
+    field(ZSV, "MAJOR")
+    field(ONAM, "OK")
+    field(SCAN,"I/O Intr")
+}
+record(bi, "$(P)Intlk-ExtT3:sIgn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 44 0x0008)")
+    field(ZNAM, "Active")
+    field(ONAM, "Ignored")
+    field(SCAN,"I/O Intr")
+}

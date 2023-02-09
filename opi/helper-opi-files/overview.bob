@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>Overview</name>
-  <widget type="label" version="2.0.0">
-    <name>Label</name>
-    <class>TITLE</class>
-    <text>My Display</text>
-    <x use_class="true">20</x>
-    <y use_class="true">0</y>
-    <width>550</width>
-    <height use_class="true">50</height>
-    <font use_class="true">
-      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
-      </font>
-    </font>
-    <foreground_color use_class="true">
-      <color name="HEADER-TEXT" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <transparent use_class="true">true</transparent>
-    <horizontal_alignment use_class="true">0</horizontal_alignment>
-    <vertical_alignment use_class="true">1</vertical_alignment>
-    <wrap_words use_class="true">false</wrap_words>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text>Nominal Power:</text>
-    <y>50</y>
-    <width>110</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>$(P)NomPwr:sRdV</pv_name>
-    <x>220</x>
-    <y>50</y>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>$(P)NomPwr:cSetV</pv_name>
-    <x>110</x>
-    <y>50</y>
-  </widget>
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button</name>
     <pv_name>$(P)Remote:cOn</pv_name>
@@ -62,25 +23,11 @@
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(pv_name)</pv_name>
-        <value>1</value>
-        <description>Reset</description>
-      </action>
-    </actions>
-    <pv_name>$(P)cmdRst</pv_name>
-    <x>40</x>
-    <y>350</y>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text> Set-point      Read-back</text>
-    <x>440</x>
-    <y>30</y>
+    <x>500</x>
+    <y>10</y>
     <width>170</width>
   </widget>
   <widget type="group" version="2.0.0">
@@ -88,8 +35,8 @@
     <macros>
       <D>Ug</D>
     </macros>
-    <x>380</x>
-    <y>50</y>
+    <x>440</x>
+    <y>30</y>
     <width>220</width>
     <height>20</height>
     <style>3</style>
@@ -116,8 +63,8 @@
     <macros>
       <D>Ud</D>
     </macros>
-    <x>380</x>
-    <y>70</y>
+    <x>440</x>
+    <y>50</y>
     <width>220</width>
     <height>20</height>
     <style>3</style>
@@ -142,23 +89,119 @@
   <widget type="choice" version="2.0.0">
     <name>Choice Button</name>
     <pv_name>$(P)dBm:cOn</pv_name>
-    <x>370</x>
-    <y>110</y>
+    <x>320</x>
+    <y>20</y>
     <items>
       <item>Item 1</item>
       <item>Item 2</item>
     </items>
   </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_1</name>
-    <pv_name>$(P)NomPwrdBm:cSetV</pv_name>
-    <x>180</x>
-    <y>170</y>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>110</x>
+    <y>150</y>
+    <width>249</width>
+    <height>160</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="symbol" version="2.0.0">
+      <name>Symbol</name>
+      <symbols>
+        <symbol>../../freia-symbols/electronics/Amplifier_red.svg</symbol>
+      </symbols>
+      <x>39</x>
+      <width>210</width>
+      <height>160</height>
+    </widget>
+    <widget type="symbol" version="2.0.0">
+      <name>Symbol_1</name>
+      <symbols>
+        <symbol>../../../freia-symbols/electronics/JS Disconnecting Switch Off.svg</symbol>
+      </symbols>
+      <y>63</y>
+      <width>40</width>
+      <height>30</height>
+    </widget>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_5</name>
-    <pv_name>$(P)NomPwrdBm:sRdV</pv_name>
-    <x>290</x>
-    <y>170</y>
+  <widget type="group" version="2.0.0">
+    <name>  Interlocks  </name>
+    <x>20</x>
+    <y>320</y>
+    <width>352</width>
+    <height>102</height>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Reset</description>
+        </action>
+      </actions>
+      <pv_name>$(P)cmdRst</pv_name>
+      <x>210</x>
+      <y>20</y>
+      <rules>
+        <rule name="Disabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 == 0">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P)Remote:sOn</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display</name>
+      <macros>
+        <SIG>DutyCyc</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <width>89</width>
+      <height>30</height>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_1</name>
+      <macros>
+        <SIG>ExtT1</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <x>89</x>
+      <width>100</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_2</name>
+      <macros>
+        <SIG>ExtT3</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <x>89</x>
+      <y>30</y>
+      <width>100</width>
+      <height>30</height>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_3</name>
+      <macros>
+        <SIG>WtrCool</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <y>30</y>
+      <width>100</width>
+      <height>30</height>
+      <transparent>true</transparent>
+    </widget>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <file>Embedded/nom-power.bob</file>
+    <x>30</x>
+    <y>10</y>
+    <width>290</width>
+    <height>30</height>
   </widget>
 </display>

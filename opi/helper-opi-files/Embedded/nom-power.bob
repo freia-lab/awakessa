@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>nom-power</name>
+  <width>290</width>
+  <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Nominal Power:</text>
+    <x>10</x>
+    <y>5</y>
+    <width>110</width>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Pwr[W]</name>
+    <x>120</x>
+    <y>5</y>
+    <width>160</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="Visible" prop_id="visible" out_exp="false">
+        <exp bool_exp="pvInt0 != 0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)dBm:sOn</pv_name>
+      </rule>
+    </rules>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P)NomPwr:cSetV</pv_name>
+      <width>70</width>
+      <rules>
+        <rule name="Disabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 == 0">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P)Remote:sOn</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)NomPwr:sRdV</pv_name>
+      <x>90</x>
+      <width>70</width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Pwr[dBm]</name>
+    <x>120</x>
+    <y>5</y>
+    <width>160</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="Visible" prop_id="visible" out_exp="false">
+        <exp bool_exp="pvInt0 == 0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)dBm:sOn</pv_name>
+      </rule>
+    </rules>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P)NomPwrdBm:cSetV</pv_name>
+      <width>70</width>
+      <rules>
+        <rule name="Disabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 == 0">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P)Remote:sOn</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)NomPwrdBm:sRdV</pv_name>
+      <x>90</x>
+      <width>70</width>
+    </widget>
+  </widget>
+</display>
