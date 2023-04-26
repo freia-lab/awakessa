@@ -8,6 +8,7 @@ record(ai, "$(P)NomPwr:sRdV") {
     field(PREC,"0")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
+#    info(archive, "monitor@2.5")
     field(SCAN,"I/O Intr")
 }
 

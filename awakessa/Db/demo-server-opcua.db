@@ -1,0 +1,71 @@
+record(longin, "OPC:tag11") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag11")
+    field(SCAN, "I/O Intr")
+}
+record(longin, "OPC:tag12") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag12")
+    field(SCAN, "I/O Intr")
+}
+record(int64in, "OPC:tag13") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag13")
+    field(SCAN, "I/O Intr")
+}
+record(longin, "OPC:tag14") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag14")
+    field(SCAN, "I/O Intr")
+}
+record(longin, "OPC:tag15") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag15")
+    field(SCAN, "I/O Intr")
+}
+record(int64in, "OPC:tag16") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag16")
+    field(SCAN, "I/O Intr")
+}
+record(stringin, "OPC:tag18") {
+    field(DTYP, "OPCUA")
+    field(INP, "@SLOW ns=2;s=Tag18")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai, "OPC:tag17") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag17")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "OPC:tag19") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag19")
+    field(SCAN, "I/O Intr")
+}
+record(bi, "OPC:tag20") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag20")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai, "OPC:MyTag-RB") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=MyTag")
+    field(SCAN, "I/O Intr")
+}
+record(bo, "OPC:Tag10") {
+    field(DTYP, "OPCUA")
+    field(OUT, "@FAST ns=2;s=Tag10")
+}
+record(bi, "OPC:Tag10-RB") {
+    field(DTYP, "OPCUA")
+    field(INP, "@FAST ns=2;s=Tag10")
+    field(SCAN, "I/O Intr")
+}
+record(ao, "OPC:MyTag") {
+    field(DTYP, "OPCUA")
+    field(OUT, "@FAST ns=2;s=MyTag")
+}

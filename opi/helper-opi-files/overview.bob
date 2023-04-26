@@ -204,4 +204,10 @@
     <width>290</width>
     <height>30</height>
   </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>OPC:NomPwr</pv_name>
+    <x>420</x>
+    <y>150</y>
+  </widget>
 </display>

@@ -1,0 +1,22 @@
+record(ai, "OPC:tag17") {
+    field(DTYP, "OPCUA")
+    field(INP, "@SSA1 ns=4;s=\"ModbusBuffer\".\"BufferINOut\".\"ADCdata\".\"Idrain\"")
+    field(SCAN, "I/O Intr")
+}
+
+
+record(opcuaItem, "OPC:item1") {    
+    field(INP, "@SSA1 ns=4;s=\"ModbusBuffer\".\"BufferINOut\"")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai, "OPC:tag12-a") {
+    field(DTYP, "OPCUA")
+    field(INP, "@OPC:item1 element=\"ADCdata\".\"Idrain\"")
+    field(SCAN, "I/O Intr")
+}
+
+record(ao, "OPC:NomPwr") {
+    field(DTYP, "OPCUA")
+    field(OUT, "@SSA1 ns=4;s=\"ModbusBuffer\".\"BufferINOut\".\"SetupData\".\"NominalPower\"")
+}
