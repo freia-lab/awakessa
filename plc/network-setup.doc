@@ -1,0 +1,25 @@
+How to change the network set-up of the PLC and the HMI panel
+
+1. Start with changing of the network settings of the PLC
+
+Open "System" screen on the amplifier's touch panel
+
+Change the Network Settings (IP Addr, Mask, Gateway)
+
+Press "Load the new network settings" Button
+      The PLC should have the new IP address - the connection between the HMI panel and the PLC will be lost, the Modbus connection to the new address should work.
+
+Now one needs to change the communication parameters of the touch panel.
+
+On the "System" screen press "Stop HMI RunTime" button (see "HMI devices Basic Panels 2nd Generation" https://cache.industry.siemens.com/dl/files/350/90114350/att_904652/v1/HWBasicPanels2GenUS_en-US.pdf )
+
+Navigate to "Settings -> "Service and Commisioning" and scroll down the left panel to "Edit Connections"
+Proceed from Step 1 to 2 without any change
+In step 2 change the IP address to the address of the PLC. Don't change the name of the connection (HMI_Connection_1)
+Scroll down and make sure the switch button is in ON position (connection uses entered IP address)
+Proceed to Step 3 and press "Accept" button
+
+Go back to the top menu and press "Start" button
+
+
+After changing the PLC's IP address one needs to power cycle the PLC in order to restart the OPC UA server (if needed)

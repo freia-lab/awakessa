@@ -12,7 +12,7 @@ epicsEnvSet ("IOCNAME", "ioc01-ssa")
 #opcuaSubscription FAST TEST 100
 #opcuaSubscription SLOW TEST 1000
 
-iocshLoad($(opcua_DIR)opcua.iocsh, "SESS=SSA-TEST, SUBS=SSA1, INET=192.168.10.45, PORT=4840, P=xxx-, SUBSTIME=1000")
+iocshLoad($(opcua_DIR)opcua.iocsh, "SESS=SSA-TEST, SUBS=SSA1, INET=192.168.10.47, PORT=4840, P=xxx-, SUBSTIME=1000")
 
 dbLoadRecords $(awakessa_DB)ssa-opcua.db
 
