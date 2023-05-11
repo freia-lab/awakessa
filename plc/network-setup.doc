@@ -10,6 +10,7 @@ Press "Load the new network settings" Button
       The PLC should have the new IP address - the connection between the HMI panel and the PLC will be lost, the Modbus connection to the new address should work.
 
 Now one needs to change the communication parameters of the touch panel.
+See also https://cache.industry.siemens.com/dl/files/385/67653385/att_997339/v1/67653385_ChangeConnectionControlPanel_DOC_TIAV15.1_en.pdf
 
 On the "System" screen press "Stop HMI RunTime" button (see "HMI devices Basic Panels 2nd Generation" https://cache.industry.siemens.com/dl/files/350/90114350/att_904652/v1/HWBasicPanels2GenUS_en-US.pdf )
 
