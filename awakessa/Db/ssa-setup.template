@@ -25,6 +25,20 @@ record(ao, "$(P)NomPwr:cSetV") {
     field(PINI, "YES")
 }
 
+# Update the cSetV when switching from dBm to W
+record(calcout, "$(P)NomPwr:cSetV-Upd") {
+    field(DESC,"Update cSetV of NomPwr")
+    field(INPA, "$(P)NomPwr:sRdV")
+    field(INPB, "$(P)dBm:sOn")
+    field(SCAN, ".1 second")
+    field(OOPT, "Transition To Zero")
+    field(CALC, "B")
+    field(OCAL, "A")
+    field(DOPT, "Use OCAL")
+    field(OUT,  "$(P)NomPwr:cSetV PP")
+}
+
+
 record(ai, "$(P)NomPwrdBm:sRdV") {
     field(DESC,"")
     field(DTYP,"asynFloat64")
@@ -49,6 +63,19 @@ record(ao, "$(P)NomPwrdBm:cSetV") {
     field(ADEL,"0.1")
     field(MDEL,"0.01")
     field(PINI, "YES")
+}
+
+# Update the cSetV when switching from W to dBm
+record(calcout, "$(P)NomPwrdBm:cSetV-Upd") {
+    field(DESC,"Update cSetV of NomPwrdBm")
+    field(INPA, "$(P)NomPwrdBm:sRdV")
+    field(INPB, "$(P)dBm:sOn")
+    field(SCAN, ".1 second")
+    field(OOPT, "Transition To Non-zero")
+    field(CALC, "B")
+    field(OCAL, "A")
+    field(DOPT, "Use OCAL")
+    field(OUT,  "$(P)NomPwrdBm:cSetV PP")
 }
 
 record(ai, "$(P)Ud_SP:sRdV") {
@@ -269,3 +296,12 @@ record(bi, "$(P)Intlk-ExtT3:sIgn") {
     field(ONAM, "Ignored")
     field(SCAN,"I/O Intr")
 }
+record(bi, "$(P)RFswitch:sOn") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 45 0x0100)")
+    field(ZNAM, "Open")
+    field(ZSV, "MAJOR")
+    field(ONAM, "Closed")
+    field(SCAN,"I/O Intr")
+}
+

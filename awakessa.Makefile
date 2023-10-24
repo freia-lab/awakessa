@@ -26,17 +26,8 @@ ARCH_FILTER += linux-x86_64
 #     REQUIRED += asyn
 
 REQUIRED += modbus
-  ifneq ($(strip $(MODBUS_DEP_VERSION)),)
-  modbus_VERSION=$(MODBUS_DEP_VERSION)
-endif
 REQUIRED += iocshutils
-ifneq ($(strip $(IOCSHUTILS_DEP_VERSION)),)
-  iocshutils_VERSION=$(IOCSHUTILS_DEP_VERSION)
-endif
 REQUIRED += autosave
-ifneq ($(strip $(AUTOSAVE_DEP_VERSION)),)
-  autosave_VERSION=$(AUTOSAVE_DEP_VERSION)
-endif
 
 # Since this file (awakessa.Makefile) is copied into
 # the module directory at build-time, these paths have to be relative

@@ -34,7 +34,7 @@ modbusInterposeConfig("$(ASYN_PORT)",0,1000,0)
 drvModbusAsynConfigure("DATA_IN", "$(ASYN_PORT)", 0, 3, 0, 60, FLOAT32_BE, 500, "ssa")
 drvModbusAsynConfigure("DATA_OUT", "$(ASYN_PORT)", 0, 6, 0, 60, FLOAT32_BE, 1, "ssa")
 
-drvModbusAsynConfigure("SETUP_IN", "$(ASYN_PORT)", 0, 3, 60, 45, UINT16, 500, "ssa")
+drvModbusAsynConfigure("SETUP_IN", "$(ASYN_PORT)", 0, 3, 60, 56, UINT16, 500, "ssa")
 drvModbusAsynConfigure("SETUP_OUT", "$(ASYN_PORT)", 0, 6, 60, 10, UINT16, 1, "ssa")
 
 dbLoadRecords "awake-ssa.db", "P=$(PREFIX), PORT_IN=DATA_IN, PORT_OUT=DATA_OUT, STUP_IN=SETUP_IN, STUP_OUT=SETUP_OUT, SCAN='I/O Intr'"
