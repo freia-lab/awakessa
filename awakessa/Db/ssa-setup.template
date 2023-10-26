@@ -164,6 +164,54 @@ record(ai, "$(P)Id:sRdV") {
     field(MDEL,"0.01")
     field(SCAN,"I/O Intr")
 }
+record(ai, "$(P)TT01:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 22)FLOAT32_BE")
+    field(EGU,"°C")
+    field(HOPR,"0")
+    field(LOPR,"100.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)TT02:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 24)FLOAT32_BE")
+    field(EGU,"°C")
+    field(HOPR,"0")
+    field(LOPR,"100.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)TT03:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 26)FLOAT32_BE")
+    field(EGU,"°C")
+    field(HOPR,"0")
+    field(LOPR,"100.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)TT04:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 28)FLOAT32_BE")
+    field(EGU,"°C")
+    field(HOPR,"0")
+    field(LOPR,"100.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
 record(ai, "$(P)Pfwd-dBm:sRdV") {
     field(DESC,"")
     field(DTYP,"asynFloat64")
@@ -186,6 +234,18 @@ record(ai, "$(P)Prev-dBm:sRdV") {
     field(PREC,"0")
     field(ADEL,"0.1")
     field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+record(ai, "$(P)Effic:sRdV") {
+    field(DESC,"")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) 34)FLOAT32_BE")
+    field(EGU,"%")
+    field(HOPR,"100")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
     field(SCAN,"I/O Intr")
 }
 
