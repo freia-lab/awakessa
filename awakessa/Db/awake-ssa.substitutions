@@ -32,6 +32,45 @@ file "ssa-lookup.template" { pattern
 {LKupTbl-Ug		   V	9	 58}
 }
 
+file "ssa-ai.template" { pattern
+{S         EGU   LOPR,  HOPR   PREC  DESC                              OFFS}
+{NomPwr	   W     10.0   500.0  0     "Nominal Power"     	       1}
+{NomPwrdBm dBm   -27.0  57.0   1     "Nominal Power [dBm]"   	       3}
+{Ud_SP	   V     0.0    35.0   1     "Drain Voltage set point"         5}
+{Ug_SP	   V     0.0    3.5    2     "Gate Voltage set point"          7}
+{Ud	   V     0.0    35.0   1     "Drain Voltage read-back"         10}
+{Ug	   V     0.0    3.5    2     "Gate Voltage read-back"          12}
+{Pfwd	   W     0.0    500.0  0     "Forward Power"     	       14}
+{Prev	   W     0.0    500.0  0     "Reverse Power"     	       16}
+{Id	   A     0.0    15.0   1     "Drain current"     	       18}
+{TT01	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       22}
+{TT02	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       24}
+{TT03	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       26}
+{TT04	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       28}
+{Pfwd-dBm  dBm   -26.0  56.0   1     "Forward Power [dBm]"     	       30}
+{Prev-dBm  dBm   -26.0  56.0   1     "Reverse Power [dBm]"     	       32}
+{Effic     "%"   0.0  	100.0  1     "Efficiency"     	       	       34}
+}
+
+file "ssa-bo-bi.template" { pattern
+{S                    HIGH	   ZNAM      ONAM          ZSV           OFFS    BITMASK}
+{Remote:cOn	      0.0	   Local     Remote   	   MINOR	 0	 0x0100}
+{dBm:cOn	      0.0	   "Unit: W" "Unit: dBm"   NO_ALARM	 0	 0x0200}
+{Intlk-DutyCyc:cIgn   0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0001}
+{Intlk-Key:cIgn       0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0002}
+{Intlk-ExtT1:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0004}
+{Intlk-ExtT3:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0008}
+{Intlk-PSok:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0010}
+{Intlk-WtrCool:cIgn   0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0020}
+{Intlk-FanOK:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0040}
+{Intlk-ExtIntlk:cIgn  0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0080}
+}
+
+file "ssa-cmd.template" { pattern
+{S         HIGH	   ZNAM      ONAM          ZSV           OFFS    BITMASK}
+{cmdRst	   0.5	   "Idle"    "Reset"   	   NO_ALARM	 9	 0x0800}
+}
+
 file "ssa-setup.template" { pattern {}
 {}
 }

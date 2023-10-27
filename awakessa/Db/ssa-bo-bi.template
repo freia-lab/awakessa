@@ -1,0 +1,18 @@
+record(bo, "$(P)$(S)") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(STUP_OUT) $(OFFS) $(BITMASK))")
+    field(HIGH, "$(HIGH)")
+    field(ZNAM, "$(ZNAM)")
+    field(ONAM, "$(ONAM)")
+    field(ZSV, "$(ZSV)")
+    field(PINI, "YES")
+}
+
+record(bi, "$(P)$(S)-RBK") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) $(OFFS) $(BITMASK))")
+    field(ZNAM, "$(ZNAM)")
+    field(ONAM, "$(ONAM)")
+    field(ZSV, "$(ZSV)")
+    field(SCAN,"I/O Intr")
+}

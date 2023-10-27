@@ -1,0 +1,13 @@
+record(ai, "$(P)$(S):sRdV") {
+    field(DESC,"$(DESC)")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(STUP_IN) $(OFFS))FLOAT32_BE")
+    field(EGU,"$(EGU)")
+    field(HOPR,"$(HOPR)")
+    field(LOPR,"$(LOPR)")
+    field(PREC,"$(PREC)")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(SCAN,"I/O Intr")
+}
+
