@@ -66,9 +66,21 @@ file "ssa-bo-bi.template" { pattern
 {Intlk-ExtIntlk:cIgn  0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0080}
 }
 
+file "ssa-bi.template" { pattern
+{S             	   ZNAM      ONAM          ZSV           OSV           OFFS    BITMASK}
+{Intlk-DutyCyc:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x0100}
+{Intlk-ExtT1:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0400}
+{Intlk-ExtT3:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0800}
+{Intlk-WtrCool:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x2000}
+{PSout:sOff	   On        Off   	   NO_ALARM	 MAJOR	       45      0x0200}
+{RFswitch:sOn      Open      Closed	   MAJOR	 NO_ALARM      45      0x0100}
+}
+
 file "ssa-cmd.template" { pattern
-{S         HIGH	   ZNAM      ONAM          ZSV           OFFS    BITMASK}
-{cmdRst	   0.5	   "Idle"    "Reset"   	   NO_ALARM	 9	 0x0800}
+{S           HIGH	   ZNAM      ONAM            ZSV         OFFS    BITMASK}
+{cmdRst	     0.5	   "Idle"    "Reset"	     NO_ALARM	 9	 0x0800}
+{cmdPSoutOn  0.5	   "Idle"    "PS Output On"  NO_ALARM	 9	 0x0100}
+{cmdPSoutOff 0.5	   "Idle"    "PS Output Off" NO_ALARM	 9	 0x0200}
 }
 
 file "ssa-setup.template" { pattern {}

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-11-02 17:01:03 by konrad-->
 <display version="2.0.0">
   <name>SSA</name>
   <macros>
     <P>HPRF-SSA:</P>
   </macros>
+  <width>900</width>
   <height>590</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
@@ -39,8 +41,8 @@
         <description>Asyn Record...</description>
       </action>
     </actions>
-    <x>630</x>
-    <y>560</y>
+    <x>740</x>
+    <y>540</y>
     <width>150</width>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -65,7 +67,7 @@
     <x>20</x>
     <y>50</y>
     <width>710</width>
-    <height>490</height>
+    <height>520</height>
     <direction>0</direction>
   </widget>
 </display>

@@ -1,0 +1,9 @@
+record(bi, "$(P)$(S)") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) $(OFFS) $(BITMASK))")
+    field(ZNAM, "$(ZNAM)")
+    field(ONAM, "$(ONAM)")
+    field(ZSV, "$(ZSV)")
+    field(OSV, "$(OSV)")
+    field(SCAN,"I/O Intr")
+}
