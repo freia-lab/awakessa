@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-02 17:12:34 by konrad-->
+<!--Saved on 2023-11-15 16:30:39 by konrad-->
 <display version="2.0.0">
   <name>Overview</name>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>30</x>
+    <y>228</y>
+    <width>490</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="489.99999999999994" y="0.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button</name>
     <pv_name>$(P)Remote:cOn</pv_name>
@@ -32,40 +49,12 @@
     <width>170</width>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <macros>
-      <D>Ug</D>
-    </macros>
-    <x>440</x>
-    <y>30</y>
-    <width>220</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_2</name>
-      <text>$(D)</text>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_1</name>
-      <pv_name>$(P)$(D)_SP:sRdV</pv_name>
-      <x>60</x>
-      <width>70</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P)$(D):sRdV</pv_name>
-      <x>150</x>
-      <width>70</width>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
     <name>Group_1</name>
     <macros>
       <D>Ud</D>
     </macros>
     <x>440</x>
-    <y>50</y>
+    <y>30</y>
     <width>220</width>
     <height>20</height>
     <style>3</style>
@@ -107,10 +96,11 @@
     <transparent>true</transparent>
     <widget type="symbol" version="2.0.0">
       <name>Symbol</name>
-      <pv_name>$(P)PSout:sOff</pv_name>
+      <pv_name>$(P)PS:VisuState</pv_name>
       <symbols>
-        <symbol>../../freia-symbols/electronics/Amplifier_green.svg</symbol>
         <symbol>../../freia-symbols/electronics/Amplifier_red.svg</symbol>
+        <symbol>../../freia-symbols/electronics/Amplifier_blue.svg</symbol>
+        <symbol>../../freia-symbols/electronics/Amplifier_green.svg</symbol>
       </symbols>
       <x>39</x>
       <width>210</width>
@@ -144,6 +134,14 @@
       <y>63</y>
       <width>40</width>
       <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)PS:VisuState</pv_name>
+      <x>110</x>
+      <y>68</y>
+      <width>50</width>
+      <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -389,5 +387,92 @@
       </rule>
     </rules>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_3</name>
+    <x>30</x>
+    <y>218</y>
+    <width>60</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="60.0" y="0.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="BLUE" red="79" green="228" blue="250">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_4</name>
+    <x>359</x>
+    <y>218</y>
+    <width>60</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="60.0" y="0.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="BLUE" red="79" green="228" blue="250">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_5</name>
+    <x>450</x>
+    <y>219</y>
+    <width>60</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="60.0" y="0.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </line_color>
+    <arrows>1</arrows>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_5</name>
+    <macros>
+      <S>Pin</S>
+    </macros>
+    <file>Embedded/meas-power.bob</file>
+    <x>20</x>
+    <y>180</y>
+    <width>80</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <S>Pfwd</S>
+    </macros>
+    <file>Embedded/meas-power.bob</file>
+    <x>345</x>
+    <y>180</y>
+    <width>80</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <S>Prev</S>
+    </macros>
+    <file>Embedded/meas-power.bob</file>
+    <x>440</x>
+    <y>180</y>
+    <width>80</width>
+    <height>30</height>
   </widget>
 </display>

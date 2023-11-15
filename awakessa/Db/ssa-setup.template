@@ -50,3 +50,18 @@ record(calcout, "$(P)NomPwrdBm:cSetV-Upd") {
     field(DOPT, "Use OCAL")
     field(OUT,  "$(P)NomPwrdBm:cSetV PP")
 }
+
+# Visual state for the amplifier symbol
+record(mbbi, "$(P)PS:VisuState") {
+    field(DESC,"Drain PS state")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(STUP_IN) 38 0xff00)UINT16")
+    field(SHFT, "8")
+    field(SCAN,"I/O Intr")
+    field(ZRVL, "4")
+    field(ZRST, "Off")
+    field(ONVL, "1")
+    field(ONST, "Stby")
+    field(TWVL, "2")
+    field(TWST, "On")
+}

@@ -39,7 +39,7 @@ file "ssa-ai.template" { pattern
 {Ud_SP	   V     0.0    35.0   1     "Drain Voltage set point"         5}
 {Ug_SP	   V     0.0    3.5    2     "Gate Voltage set point"          7}
 {Ud	   V     0.0    35.0   1     "Drain Voltage read-back"         10}
-{Ug	   V     0.0    3.5    2     "Gate Voltage read-back"          12}
+{Pin	   W     0.0    1.0    1     "Input Power"            	       12}
 {Pfwd	   W     0.0    500.0  0     "Forward Power"     	       14}
 {Prev	   W     0.0    500.0  0     "Reverse Power"     	       16}
 {Id	   A     0.0    15.0   1     "Drain current"     	       18}
@@ -50,6 +50,7 @@ file "ssa-ai.template" { pattern
 {Pfwd-dBm  dBm   -26.0  56.0   1     "Forward Power [dBm]"     	       30}
 {Prev-dBm  dBm   -26.0  56.0   1     "Reverse Power [dBm]"     	       32}
 {Effic     "%"   0.0  	100.0  1     "Efficiency"     	       	       34}
+{Pin-dBm   dBm   -26.0  10.0   1     "Input Power [dBm]"     	       36}
 }
 
 file "ssa-bo-bi.template" { pattern
