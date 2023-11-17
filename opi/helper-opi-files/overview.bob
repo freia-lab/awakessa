@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-15 16:30:39 by konrad-->
+<!--Saved on 2023-11-16 12:03:42 by konrad-->
 <display version="2.0.0">
   <name>Overview</name>
   <widget type="polyline" version="2.0.0">
@@ -208,7 +208,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_3</name>
       <macros>
-        <SIG>WtrCool</SIG>
+        <SIG>Key</SIG>
       </macros>
       <file>Embedded/interlock.bob</file>
       <y>30</y>

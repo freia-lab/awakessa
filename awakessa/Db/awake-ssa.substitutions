@@ -70,6 +70,7 @@ file "ssa-bo-bi.template" { pattern
 file "ssa-bi.template" { pattern
 {S             	   ZNAM      ONAM          ZSV           OSV           OFFS    BITMASK}
 {Intlk-DutyCyc:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x0100}
+{Intlk-Key:sOK 	   Fault     OK		   MAJOR	 NO_ALARM      44      0x0200}
 {Intlk-ExtT1:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0400}
 {Intlk-ExtT3:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0800}
 {Intlk-WtrCool:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x2000}
