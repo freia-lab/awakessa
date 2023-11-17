@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-16 12:03:42 by konrad-->
+<!--Saved on 2023-11-17 10:10:31 by konrad-->
 <display version="2.0.0">
   <name>Overview</name>
   <widget type="polyline" version="2.0.0">
@@ -127,8 +127,8 @@
       <name>Symbol_1</name>
       <pv_name>$(P)RFswitch:sOn</pv_name>
       <symbols>
-        <symbol>../../../freia-symbols/electronics/JS Disconnecting Switch Off-RED.svg</symbol>
-        <symbol>../../../freia-symbols/electronics/JS Disconnecting Switch On-GREEN.svg</symbol>
+        <symbol>../../freia-symbols/electronics/JS Disconnecting Switch Off-RED.svg</symbol>
+        <symbol>../../freia-symbols/electronics/JS Disconnecting Switch On-GREEN.svg</symbol>
       </symbols>
       <x>17</x>
       <y>63</y>
