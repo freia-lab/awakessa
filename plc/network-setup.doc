@@ -14,7 +14,7 @@ See also https://cache.industry.siemens.com/dl/files/385/67653385/att_997339/v1/
 
 On the "System" screen press "Stop HMI RunTime" button (see "HMI devices Basic Panels 2nd Generation" https://cache.industry.siemens.com/dl/files/350/90114350/att_904652/v1/HWBasicPanels2GenUS_en-US.pdf )
 
-Navigate to "Settings -> "Service and Commisioning" and scroll down the left panel to "Edit Connections"
+Navigate to "Settings -> "Service and Commissioning" and scroll down the left panel to "Edit Connections"
 Proceed from Step 1 to 2 without any change
 In step 2 change the IP address to the address of the PLC. Don't change the name of the connection (HMI_Connection_1)
 Scroll down and make sure the switch button is in ON position (connection uses entered IP address)
@@ -22,5 +22,16 @@ Proceed to Step 3 and press "Accept" button
 
 Go back to the top menu and press "Start" button
 
+Changing the IP parameters of the HMI panel
+
+If necessary (for example after changing the subnet) follow the procedure below:
+
+1. Open "System" screen on the amplifier's touch panel
+2. On the "System" screen press "Stop HMI RunTime"
+3. Navigate to Settings -> "Tranfer, Network & Internet" -> "Network Interface"
+4. Set the required settings for IP Address" (do not change anything for "Ethernet parameters" and "Profinet")
+5. Go back to the top menu and press "Start" button
+
 
 After changing the PLC's IP address one needs to power cycle the PLC in order to restart the OPC UA server (if needed)
+
