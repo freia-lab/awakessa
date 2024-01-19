@@ -59,10 +59,10 @@ file "ssa-bo-bi.template" { pattern
 {dBm:cOn	      0.0	   "Unit: W" "Unit: dBm"   NO_ALARM	 0	 0x0200}
 {Intlk-DutyCyc:cIgn   0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0001}
 {Intlk-Key:cIgn       0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0002}
-{Intlk-ExtT1:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0004}
-{Intlk-ExtT3:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0008}
-{Intlk-PSok:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0010}
-{Intlk-WtrCool:cIgn   0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0020}
+{Intlk-Ext1:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0004}
+{Intlk-Ext2:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0008}
+{Intlk-T1ok:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0010}
+{Intlk-Cool:cIgn      0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0020}
 {Intlk-FanOK:cIgn     0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0040}
 {Intlk-ExtIntlk:cIgn  0.0	   "Active"  "Ignored"     NO_ALARM	 44	 0x0080}
 }
@@ -71,10 +71,12 @@ file "ssa-bi.template" { pattern
 {S             	   ZNAM      ONAM          ZSV           OSV           OFFS    BITMASK}
 {Intlk-DutyCyc:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x0100}
 {Intlk-Key:sOK 	   Fault     OK		   MAJOR	 NO_ALARM      44      0x0200}
-{Intlk-ExtT1:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0400}
-{Intlk-ExtT3:sOK   Fault     OK		   MAJOR	 NO_ALARM      44      0x0800}
-{Intlk-WtrCool:sOK Fault     OK		   MAJOR	 NO_ALARM      44      0x2000}
+{Intlk-Ext1:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x0400}
+{Intlk-Ext2:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x0800}
+{Intlk-T1ok:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x1000}
+{Intlk-Cool:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x2000}
 {PSout:sOff	   On        Off   	   NO_ALARM	 MAJOR	       45      0x0200}
+{SSA_OK	   	   Fault     OK   	   MAJOR	 NO_ALARM      45      0x0400}
 {RFswitch:sOn      Open      Closed	   MAJOR	 NO_ALARM      45      0x0100}
 }
 

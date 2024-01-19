@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-17 10:10:31 by konrad-->
+<!--Saved on 2024-01-19 14:54:58 by konrad-->
 <display version="2.0.0">
   <name>Overview</name>
   <widget type="polyline" version="2.0.0">
@@ -145,10 +145,10 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>  Interlocks  </name>
+    <name>  Interlocks  In  </name>
     <x>20</x>
     <y>320</y>
-    <width>352</width>
+    <width>420</width>
     <height>102</height>
     <transparent>true</transparent>
     <widget type="action_button" version="3.0.0">
@@ -161,8 +161,8 @@
         </action>
       </actions>
       <pv_name>$(P)cmdRst</pv_name>
-      <x>210</x>
-      <y>20</y>
+      <x>279</x>
+      <y>19</y>
       <rules>
         <rule name="Disabled" prop_id="enabled" out_exp="false">
           <exp bool_exp="pvInt0 == 0">
@@ -186,22 +186,22 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_1</name>
       <macros>
-        <SIG>ExtT1</SIG>
+        <SIG>Ext1</SIG>
       </macros>
       <file>Embedded/interlock.bob</file>
       <x>89</x>
-      <width>100</width>
+      <width>90</width>
       <height>30</height>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_2</name>
       <macros>
-        <SIG>ExtT3</SIG>
+        <SIG>Ext2</SIG>
       </macros>
       <file>Embedded/interlock.bob</file>
       <x>89</x>
       <y>30</y>
-      <width>100</width>
+      <width>90</width>
       <height>30</height>
       <transparent>true</transparent>
     </widget>
@@ -213,6 +213,28 @@
       <file>Embedded/interlock.bob</file>
       <y>30</y>
       <width>100</width>
+      <height>30</height>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_8</name>
+      <macros>
+        <SIG>Cool</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <x>179</x>
+      <width>90</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_9</name>
+      <macros>
+        <SIG>T1ok</SIG>
+      </macros>
+      <file>Embedded/interlock.bob</file>
+      <x>179</x>
+      <y>30</y>
+      <width>90</width>
       <height>30</height>
       <transparent>true</transparent>
     </widget>
@@ -229,7 +251,7 @@
     <name>Text Entry</name>
     <pv_name>OPC:NomPwr</pv_name>
     <x>390</x>
-    <y>391</y>
+    <y>440</y>
   </widget>
   <widget type="group" version="2.0.0">
     <name>TT01</name>
@@ -355,7 +377,7 @@
     </actions>
     <pv_name>$(P)cmdPSoutOff</pv_name>
     <x>41</x>
-    <y>440</y>
+    <y>430</y>
     <rules>
       <rule name="Disabled" prop_id="enabled" out_exp="false">
         <exp bool_exp="pvInt0 == 0">
@@ -377,7 +399,7 @@
     </actions>
     <pv_name>$(P)cmdPSoutOn</pv_name>
     <x>167</x>
-    <y>440</y>
+    <y>430</y>
     <rules>
       <rule name="Disabled" prop_id="enabled" out_exp="false">
         <exp bool_exp="pvInt0 == 0">
@@ -474,5 +496,54 @@
     <y>180</y>
     <width>80</width>
     <height>30</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  Interlock Out  </name>
+    <x>440</x>
+    <y>320</y>
+    <width>160</width>
+    <height>102</height>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
+      <name>SSA_OK</name>
+      <pv_name>$(P)SSA_OK</pv_name>
+      <x>19</x>
+      <y>19</y>
+      <width>80</width>
+      <height>25</height>
+      <off_label>SSA_OK</off_label>
+      <off_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <on_label>SSA_OK</on_label>
+      <on_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+      <square>true</square>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_2</name>
+    <macros>
+      <D>Id</D>
+    </macros>
+    <x>440</x>
+    <y>50</y>
+    <width>220</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>$(D)</text>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P)$(D):sRdV</pv_name>
+      <x>150</x>
+      <width>70</width>
+    </widget>
   </widget>
 </display>
