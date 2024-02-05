@@ -34,7 +34,7 @@
       <action type="open_display">
         <file>../freia-symbols/display-builder/asyn/asynRecord.bob</file>
         <macros>
-          <P>ioc01-ssa:</P>
+          <P>ioc50-ssa:</P>
           <R>asynRec</R>
         </macros>
         <target>window</target>

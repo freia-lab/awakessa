@@ -4,7 +4,7 @@ require awakessa
 require opcua
 require recsync
 
-epicsEnvSet ("IOCNAME", "ioc01-ssa")
+epicsEnvSet ("IOCNAME", "ioc50-ssa")
 
 
 #opcuaSession TEST opc.tcp://192.168.10.45:4840
