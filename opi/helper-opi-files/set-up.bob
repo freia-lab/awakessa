@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-06-26 17:25:39 by konrad-->
 <display version="2.0.0">
   <name>set-up</name>
   <widget type="navtabs" version="2.0.0">
@@ -6,7 +7,7 @@
     <tabs>
       <tab>
         <name>Interlocks</name>
-        <file></file>
+        <file>Interlocks.bob</file>
         <macros>
         </macros>
         <group_name></group_name>

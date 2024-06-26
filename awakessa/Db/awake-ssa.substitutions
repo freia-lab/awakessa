@@ -78,6 +78,8 @@ file "ssa-bi.template" { pattern
 {PSout:sOff	   On        Off   	   NO_ALARM	 MAJOR	       45      0x0200}
 {SSA_OK	   	   Fault     OK   	   MAJOR	 NO_ALARM      45      0x0400}
 {RFswitch:sOn      Open      Closed	   MAJOR	 NO_ALARM      45      0x0100}
+{Intlk-Prev:sOK    "TooHi"   OK	   	   MAJOR	 NO_ALARM      45      0x0800}
+{Intlk-Pin:sOK     "TooHi"   OK	   	   MAJOR	 NO_ALARM      45      0x1000}
 }
 
 file "ssa-cmd.template" { pattern

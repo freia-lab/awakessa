@@ -65,3 +65,30 @@ record(mbbi, "$(P)PS:VisuState") {
     field(TWVL, "2")
     field(TWST, "On")
 }
+
+# Set-up parameters for the software interlocks
+
+record(ao, "$(P)PrevFactor:cSetV") {
+    field(DESC,"IntlkOK: Prev < PrevFactor * Pfwd")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(STUP_OUT) 46)FLOAT32_BE")
+    field(HOPR,"0.3")
+    field(LOPR,"0.01")
+    field(PREC,"2")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}
+
+record(ao, "$(P)PinMax:cSetV") {
+    field(DESC,"IntlkOK: Pin < PinMax")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(STUP_OUT) 48)FLOAT32_BE")
+    field(EGU,"dBm")
+    field(HOPR,"10.0")
+    field(LOPR,"0")
+    field(PREC,"0")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}

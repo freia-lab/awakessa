@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-01-19 14:54:58 by konrad-->
+<!--Saved on 2024-06-26 18:16:35 by konrad-->
 <display version="2.0.0">
   <name>Overview</name>
   <widget type="polyline" version="2.0.0">
@@ -48,7 +48,7 @@
     <y>10</y>
     <width>170</width>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>Group_1</name>
     <macros>
       <D>Ud</D>
@@ -86,7 +86,7 @@
       <item>Item 2</item>
     </items>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>Group</name>
     <x>110</x>
     <y>150</y>
@@ -144,7 +144,7 @@
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>  Interlocks  In  </name>
     <x>20</x>
     <y>320</y>
@@ -253,7 +253,7 @@
     <x>390</x>
     <y>440</y>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>TT01</name>
     <macros>
       <N>01</N>
@@ -276,7 +276,7 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>TT03</name>
     <macros>
       <N>03</N>
@@ -299,7 +299,7 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>TT04</name>
     <macros>
       <N>04</N>
@@ -322,7 +322,7 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>TT02</name>
     <macros>
       <N>02</N>
@@ -497,7 +497,7 @@
     <width>80</width>
     <height>30</height>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>  Interlock Out  </name>
     <x>440</x>
     <y>320</y>
@@ -524,7 +524,7 @@
       <square>true</square>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>Group_2</name>
     <macros>
       <D>Id</D>
@@ -545,5 +545,49 @@
       <x>150</x>
       <width>70</width>
     </widget>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(P)Intlk-Prev:sOK</pv_name>
+    <x>455</x>
+    <y>231</y>
+    <width>60</width>
+    <height>25</height>
+    <off_label>Too Hi</off_label>
+    <off_color>
+      <color name="ERROR" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </on_color>
+    <line_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </line_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>$(P)Intlk-Pin:sOK</pv_name>
+    <x>35</x>
+    <y>231</y>
+    <width>60</width>
+    <height>25</height>
+    <off_label>Too Hi</off_label>
+    <off_color>
+      <color name="ERROR" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </on_color>
+    <line_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </line_color>
+    <square>true</square>
   </widget>
 </display>
