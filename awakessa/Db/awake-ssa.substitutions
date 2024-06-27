@@ -75,11 +75,11 @@ file "ssa-bi.template" { pattern
 {Intlk-Ext2:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x0800}
 {Intlk-T1ok:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x1000}
 {Intlk-Cool:sOK    Fault     OK		   MAJOR	 NO_ALARM      44      0x2000}
+{Intlk-Prev:sOK    "TooHi"   OK	   	   MAJOR	 NO_ALARM      44      0x4000}
+{Intlk-Pin:sOK     "TooHi"   OK	   	   MAJOR	 NO_ALARM      44      0x8000}
 {PSout:sOff	   On        Off   	   NO_ALARM	 MAJOR	       45      0x0200}
 {SSA_OK	   	   Fault     OK   	   MAJOR	 NO_ALARM      45      0x0400}
 {RFswitch:sOn      Open      Closed	   MAJOR	 NO_ALARM      45      0x0100}
-{Intlk-Prev:sOK    "TooHi"   OK	   	   MAJOR	 NO_ALARM      45      0x0800}
-{Intlk-Pin:sOK     "TooHi"   OK	   	   MAJOR	 NO_ALARM      45      0x1000}
 }
 
 file "ssa-cmd.template" { pattern
