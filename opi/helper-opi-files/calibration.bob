@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-01-16 16:39:02 by konrad-->
+<display version="2.0.0">
+  <name>calibrations</name>
+  <width>580</width>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>The power  P as a function of the voltage on the ADC input x
+is calculated according to the formula:
+                           P[dBm] = A * x[V] + B </text>
+    <x>10</x>
+    <y>10</y>
+    <width>440</width>
+    <height>70</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <L>Pwr In</L>
+      <S>PinCoef</S>
+    </macros>
+    <file>Embedded/power-calibr.bob</file>
+    <x>10</x>
+    <y>90</y>
+    <width>555</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <L>Pwr Fwd</L>
+      <S>PfwdCoef</S>
+    </macros>
+    <file>Embedded/power-calibr.bob</file>
+    <x>10</x>
+    <y>120</y>
+    <width>555</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <L>Pwr Rev</L>
+      <S>PrevCoef</S>
+    </macros>
+    <file>Embedded/power-calibr.bob</file>
+    <x>10</x>
+    <y>150</y>
+    <width>555</width>
+    <height>30</height>
+  </widget>
+</display>

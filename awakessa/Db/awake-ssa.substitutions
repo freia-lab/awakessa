@@ -24,33 +24,37 @@ file "ssa-lookup.template" { pattern
 {LKupTbl-Ug		   V	1	 42}
 {LKupTbl-Ug		   V	2	 44}
 {LKupTbl-Ug		   V	3	 46}
-{LKupTbl-Ug		   V	4	 48}
-{LKupTbl-Ug		   V	5	 50}
-{LKupTbl-Ug		   V	6	 52}
-{LKupTbl-Ug		   V	7	 54}
-{LKupTbl-Ug		   V	8	 56}
-{LKupTbl-Ug		   V	9	 58}
+}
+
+file "calibr.template" { pattern
+{S   			   EGU          OFFS}
+{PinCoefA		   "dBm/V"  	48}
+{PinCoefB		   "dBm"  	50}
+{PrevCoefA		   "dBm/V"  	52}
+{PrevCoefB		   "dBm"  	54}
+{PfwdCoefA		   "dBm/V"  	56}
+{PfwdCoefB		   "dBm"  	58}
 }
 
 file "ssa-ai.template" { pattern
-{S         EGU   LOPR,  HOPR   PREC  DESC                              OFFS}
-{NomPwr	   W     10.0   500.0  0     "Nominal Power"     	       1}
-{NomPwrdBm dBm   -27.0  57.0   1     "Nominal Power [dBm]"   	       3}
-{Ud_SP	   V     0.0    35.0   1     "Drain Voltage set point"         5}
-{Ug_SP	   V     0.0    3.5    2     "Gate Voltage set point"          7}
-{Ud	   V     0.0    35.0   1     "Drain Voltage read-back"         10}
-{Pin	   W     0.0    1.0    1     "Input Power"            	       12}
-{Pfwd	   W     0.0    500.0  0     "Forward Power"     	       14}
-{Prev	   W     0.0    500.0  0     "Reverse Power"     	       16}
-{Id	   A     0.0    15.0   1     "Drain current"     	       18}
-{TT01	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       22}
-{TT02	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       24}
-{TT03	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       26}
-{TT04	   "°C"  0.0    100.0  1     "Chassis Temperature"     	       28}
-{Pfwd-dBm  dBm   -26.0  56.0   1     "Forward Power [dBm]"     	       30}
-{Prev-dBm  dBm   -26.0  56.0   1     "Reverse Power [dBm]"     	       32}
-{Effic     "%"   0.0  	100.0  1     "Efficiency"     	       	       34}
-{Pin-dBm   dBm   -26.0  10.0   1     "Input Power [dBm]"     	       36}
+{S         EGU   ASLO LOPR,  HOPR   PREC  DESC                              OFFS}
+{NomPwr	   W     1    10.0   500.0  0     "Nominal Power"     	       	    1}
+{NomPwrdBm dBm   1    -27.0  57.0   1     "Nominal Power [dBm]"   	    3}
+{Ud_SP	   V     1    0.0    35.0   1     "Drain Voltage set point"         5}
+{Ug_SP	   V     1    0.0    3.5    2     "Gate Voltage set point"          7}
+{Ud	   V     1    0.0    35.0   1     "Drain Voltage read-back"         10}
+{Pin	   mW    1000 0.0    1000   1     "Input Power"            	    12}
+{Pfwd	   W     1    0.0    500.0  0     "Forward Power"     	       	    14}
+{Prev	   W     1    0.0    500.0  0     "Reverse Power"     	       	    16}
+{Id	   A     1    0.0    15.0   1     "Drain current"     	       	    18}
+{TT01	   "°C"  1    0.0    100.0  1     "Chassis Temperature"     	    22}
+{TT02	   "°C"  1    0.0    100.0  1     "Chassis Temperature"     	    24}
+{TT03	   "°C"  1    0.0    100.0  1     "Chassis Temperature"     	    26}
+{TT04	   "°C"  1    0.0    100.0  1     "Chassis Temperature"     	    28}
+{Pfwd-dBm  dBm   1    -26.0  56.0   1     "Forward Power [dBm]"     	    30}
+{Prev-dBm  dBm   1    -26.0  56.0   1     "Reverse Power [dBm]"     	    32}
+{Effic     "%"   1    0.0    100.0  1     "Efficiency"     	       	    34}
+{Pin-dBm   dBm   1    -26.0  10.0   1     "Input Power [dBm]"     	    36}
 }
 
 file "ssa-bo-bi.template" { pattern

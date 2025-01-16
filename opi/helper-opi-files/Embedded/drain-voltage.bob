@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-01-15 17:39:37 by konrad-->
+<display version="2.0.0">
+  <name>drain voltage</name>
+  <width>290</width>
+  <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Drain voltage:</text>
+    <y>5</y>
+    <width>110</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)Ud:cSetV</pv_name>
+    <x>110</x>
+    <y>5</y>
+    <width>70</width>
+    <rules>
+      <rule name="Disabled" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pvInt0 == 0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)Remote:cOn-RBK</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)Ud:sRdV</pv_name>
+    <x>200</x>
+    <y>5</y>
+    <width>70</width>
+  </widget>
+</display>

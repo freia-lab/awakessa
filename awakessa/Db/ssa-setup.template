@@ -12,6 +12,19 @@ record(ao, "$(P)NomPwr:cSetV") {
     field(PINI, "YES")
 }
 
+record(ao, "$(P)Ud:cSetV") {
+    field(DESC,"Drain Voltage set value")
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(STUP_OUT) 5)FLOAT32_BE")
+    field(EGU,"V")
+    field(HOPR,"32.0")
+    field(LOPR,"13.5")
+    field(PREC,"2")
+    field(ADEL,"0.1")
+    field(MDEL,"0.01")
+    field(PINI, "YES")
+}
+
 # Update the cSetV when switching from dBm to W
 record(calcout, "$(P)NomPwr:cSetV-Upd") {
     field(DESC,"Update cSetV of NomPwr")

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-15 16:26:05 by konrad-->
+<!--Saved on 2025-01-16 17:08:31 by konrad-->
 <display version="2.0.0">
   <name>meas-power</name>
-  <width>80</width>
+  <width>110</width>
   <height>30</height>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>Pwr[W]</name>
     <x>5</x>
     <y>5</y>
-    <width>70</width>
+    <width>100</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -23,14 +23,13 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P)$(S):sRdV</pv_name>
-      <width>70</width>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>Pwr[dBm]</name>
     <x>5</x>
     <y>5</y>
-    <width>70</width>
+    <width>100</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -45,7 +44,6 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P)$(S)-dBm:sRdV</pv_name>
-      <width>70</width>
     </widget>
   </widget>
 </display>

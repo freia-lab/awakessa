@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-06-26 17:25:39 by konrad-->
+<!--Saved on 2025-01-16 16:41:03 by konrad-->
 <display version="2.0.0">
   <name>set-up</name>
   <widget type="navtabs" version="2.0.0">
@@ -13,16 +13,14 @@
         <group_name></group_name>
       </tab>
       <tab>
-        <name>Look-up table</name>
-        <file>lkup-tbl.bob</file>
+        <name>Calibrations</name>
+        <file>calibration.bob</file>
         <macros>
         </macros>
         <group_name></group_name>
       </tab>
     </tabs>
-    <x>10</x>
-    <y>10</y>
-    <width>660</width>
+    <width>690</width>
     <height>420</height>
   </widget>
 </display>
